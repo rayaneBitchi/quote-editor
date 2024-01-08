@@ -2,13 +2,12 @@ require 'application_system_test_case'
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first) # Refers to the first fixture quote in test/fixtures/quotes.yml
+    @quote = quotes(:first) # Reference to the first fixture quote
   end
 
-  test 'creating a new quote' do
-    # When we visite the Quotes#index page
-    # we expect to see a title with text "Quotes"
-
+  test 'Creating a new quote' do
+    # When we visit the Quotes#index page
+    # we expect to see a title with the text "Quotes"
     visit quotes_path
     assert_selector 'h1', text: 'Quotes'
 
@@ -19,13 +18,11 @@ class QuotesTest < ApplicationSystemTestCase
 
     # When we fill in the name input with "Capybara quote"
     # and we click on "Create Quote"
-
-    fill_in 'Name',	with: 'Capybara quote'
+    fill_in 'Name', with: 'Capybara quote'
     click_on 'Create quote'
 
     # We expect to be back on the page with the title "Quotes"
-    # and to see oru "Capybara quote" added to the list of quotes
-
+    # and to see our "Capybara quote" added to the list
     assert_selector 'h1', text: 'Quotes'
     assert_text 'Capybara quote'
   end
@@ -41,10 +38,10 @@ class QuotesTest < ApplicationSystemTestCase
     visit quotes_path
     assert_selector 'h1', text: 'Quotes'
 
-    click_link 'Edit', match: :first
+    click_on 'Edit', match: :first
     assert_selector 'h1', text: 'Edit quote'
 
-    fill_in 'Name',	with: 'Updated quote'
+    fill_in 'Name', with: 'Updated quote'
     click_on 'Update quote'
 
     assert_selector 'h1', text: 'Quotes'
