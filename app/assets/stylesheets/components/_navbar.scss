@@ -1,0 +1,28 @@
+// app/assets/stylesheets/components/_navbar.scss
+
+.navbar {
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-large);
+  padding: var(--spacing-xs) var(--spacing-m);
+  margin-bottom: var(--spacing-xxl);
+  background-color: (var(--color-white));
+  padding: var(--spacing-xs) var(--spacing-m);
+
+  &__brand {
+    font-weight: bold;
+    font-size: var(--font-size-xl);
+    color: var(--color-text-header);
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: var(--spacing-s);
+    color: var(--color-text-header);
+  }
+
+  &__right {
+    margin-left: auto;
+  }
+}
