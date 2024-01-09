@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  padding-right: var(--spaceing-xs);
+  padding-left: var(--spacing-xs);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(tableAndUp) {
+    padding-right: var(--spacing-m);
+    padding-left: var(--spacing-m);
+    max-width: 60rem;
+  }
+}

@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  justify-content: space-between;
+  margin-top: var(--spacing-m);
+  margin-bottom: var(--spacing-l);
+
+  @include media(tableAndUp) {
+    margin-bottom: var(--spacing-xl);
+  }
+}
