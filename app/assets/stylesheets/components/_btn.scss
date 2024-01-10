@@ -1,7 +1,11 @@
 .btn {
-  display: grid;
-  place-content: center;
-  padding: var(--spacing-xs) var(--spacing-s);
+  // display: grid;
+  // place-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: var(--spacing-xxs) var(--spacing-xs);
   border-radius: var(--border-radius);
   background-origin: border-box; // Invisible borders with linear graduents
   background-color: transparent;

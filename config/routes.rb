@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :quotes do
-    resources :line_item_dates, expect: %i[index show]
+    resources :line_item_dates, expect: %i[index show] do
+      resources :line_items, expect: %i[index show]
+    end
   end
 end
