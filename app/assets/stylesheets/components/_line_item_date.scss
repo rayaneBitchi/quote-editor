@@ -1,0 +1,26 @@
+// app/assets/stylesheets/components/_line_item_date.scss
+
+.line-item-date {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxs);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xs);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+
+    @include media(tabletAndUp) {
+      font-size: var(--font-size-xxl);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--spacing-xs);
+  }
+}
